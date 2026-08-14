@@ -32,12 +32,19 @@
 
 html {
     scroll-behavior: smooth;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
+    width: 100%;
+    max-width: 100%;
+
     font-family: "Inter", sans-serif;
     color: var(--black);
     background: var(--white);
+
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
 }
@@ -1048,6 +1055,29 @@ button {
 
 @media (max-width: 700px) {
 
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    main,
+    section,
+    .section,
+    .hero,
+    .hero-card,
+    .education-layout,
+    .project-section,
+    .project-wordmark,
+    .project-content,
+    .credential-card,
+    .contact-section {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
     /* Minimal mobile header: brand only */
     .site-header {
         min-height: 76px;
@@ -1251,27 +1281,33 @@ button {
     }
 
 
-    /* NET NEEDLE */
+    /* NET NEEDLE — MOBILE WIDTH FIX */
+    .project-section {
+        overflow-x: hidden;
+    }
+
     .project-wordmark {
         width: 100%;
-        overflow: visible;
+        max-width: 100%;
+        overflow: hidden;
     }
 
     .project-wordmark span {
         display: block;
-        width: 100%;
+        width: auto;
         max-width: 100%;
 
-        line-height: .78;
-        letter-spacing: -.035em;
+        line-height: .80;
         white-space: nowrap;
-
         transform-origin: left center;
     }
 
-    /* NET can stay larger because it is only 3 letters */
+    /* NET is only 3 letters, so it can remain larger */
     .net-word {
-        font-size: clamp(78px, 24vw, 108px);
+        font-size: clamp(72px, 22vw, 96px);
+        letter-spacing: -.045em;
+
+        color: #111111;
 
         -webkit-text-stroke: 2px #84AECD;
         text-stroke: 2px #84AECD;
@@ -1279,11 +1315,14 @@ button {
         paint-order: stroke fill;
     }
 
-    /* NEEDLE is 6 letters, so it uses a smaller responsive size */
+    /* NEEDLE is wider, so use a smaller independent font size */
     .needle-word {
         margin-left: 0;
 
-        font-size: clamp(58px, 19.5vw, 84px);
+        font-size: clamp(50px, 16.2vw, 70px);
+        letter-spacing: -.055em;
+
+        color: #84AECD;
 
         -webkit-text-stroke: 2px #111111;
         text-stroke: 2px #111111;
@@ -1361,11 +1400,12 @@ button {
 @media (max-width: 420px) {
 
     .net-word {
-        font-size: clamp(72px, 23vw, 96px);
+        font-size: clamp(66px, 21vw, 86px);
     }
 
     .needle-word {
-        font-size: clamp(54px, 18.5vw, 76px);
+        font-size: clamp(46px, 15.4vw, 64px);
+        letter-spacing: -.06em;
     }
 
     .hero-card {
@@ -1421,12 +1461,12 @@ button {
 @media (max-width: 360px) {
 
     .net-word {
-        font-size: 76px;
+        font-size: 68px;
     }
 
     .needle-word {
-        font-size: 56px;
-        letter-spacing: -.04em;
+        font-size: 48px;
+        letter-spacing: -.065em;
     }
 
     .hero-card {
