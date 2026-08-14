@@ -2409,3 +2409,246 @@ footer {
     }
 
 }
+
+/* =========================================================
+   MOBILE OVERLAP FIX — SAFE COMPACT ANIMATIONS
+   Keeps animated artwork inside its own mobile container.
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+        min-height: auto;
+        padding-top: 105px;
+        overflow: hidden;
+    }
+
+    .hero-grid {
+        gap: 36px;
+    }
+
+    .hero-content {
+        min-width: 0;
+    }
+
+    .hero-name {
+        font-size: clamp(54px, 17vw, 68px);
+        line-height: .9;
+    }
+
+    .hero-role {
+        row-gap: 6px;
+    }
+
+    .hero-contact div {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: 6px;
+        align-items: baseline;
+    }
+
+    .hero-contact a {
+        min-width: 0;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .hero-description {
+        margin-top: 46px;
+    }
+
+    /* Do not scale the desktop composition on mobile.
+       A scaled absolutely-positioned composition can escape its layout box. */
+    .hero-art {
+        width: 100%;
+        height: 330px;
+        margin: 20px auto 0;
+        transform: none !important;
+        transform-origin: center;
+        overflow: hidden;
+        pointer-events: none;
+        perspective: none;
+    }
+
+    .card-one {
+        width: 42%;
+        height: 68%;
+        left: 9%;
+        top: 5%;
+        animation: mobileFloatOne 6s ease-in-out infinite;
+    }
+
+    .card-two {
+        width: 48%;
+        height: 66%;
+        left: 34%;
+        top: 11%;
+        animation: mobileFloatTwo 7s ease-in-out infinite;
+    }
+
+    .card-three {
+        width: 42%;
+        height: 48%;
+        left: 14%;
+        top: 43%;
+        animation: mobileFloatThree 8s ease-in-out infinite;
+    }
+
+    .card-four {
+        width: 47%;
+        height: 47%;
+        right: 5%;
+        bottom: 5%;
+        animation: mobileFloatFour 7.5s ease-in-out infinite;
+    }
+
+    .blue-core {
+        width: 34%;
+        height: 43%;
+        right: 9%;
+        top: 30%;
+        animation: mobileFloatCore 7s ease-in-out infinite;
+    }
+
+    .art-shadow {
+        width: 72%;
+        height: 35px;
+        left: 14%;
+        bottom: 5px;
+        filter: blur(22px);
+    }
+
+    .art-number {
+        left: 4%;
+        top: 34%;
+        font-size: 46px;
+    }
+
+    .art-label {
+        right: 3%;
+        bottom: 3%;
+        font-size: 6px;
+        letter-spacing: .18em;
+    }
+
+    .hero-footer {
+        margin-top: 20px;
+        padding-bottom: 28px;
+    }
+
+    /* Keep large animated project visual inside the viewport. */
+    .project-top h2 {
+        font-size: clamp(68px, 22vw, 90px);
+        line-height: .82;
+        max-width: 100%;
+    }
+
+    .display-content {
+        min-height: auto;
+        padding: 34px 22px 45px;
+        gap: 44px;
+    }
+
+    .display-main h3 {
+        font-size: clamp(44px, 14vw, 56px);
+        line-height: .9;
+    }
+
+    .display-orbit {
+        width: min(76vw, 280px);
+        height: min(76vw, 280px);
+        max-width: 100%;
+    }
+
+    .orbit-center {
+        width: 92px;
+        height: 92px;
+    }
+
+    .cert-heading h2 {
+        font-size: clamp(44px, 14vw, 53px);
+    }
+
+    .contact-section h2 {
+        font-size: clamp(50px, 16vw, 62px);
+    }
+
+    .footer-grid,
+    .footer-links {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .hero-art {
+        height: 290px;
+    }
+
+    .hero-name {
+        font-size: clamp(50px, 16vw, 62px);
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .about-heading h2 {
+        font-size: 40px;
+    }
+
+    .expertise-heading h2 {
+        font-size: 46px;
+    }
+
+    .project-top h2 {
+        font-size: clamp(62px, 21vw, 82px);
+    }
+
+    .project-description .project-lead {
+        font-size: 25px;
+    }
+
+    .display-header {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .cert-card {
+        min-height: 410px;
+        padding: 24px;
+    }
+
+    .cert-body h3 {
+        font-size: 26px;
+    }
+
+    .contact-section h2 {
+        font-size: clamp(46px, 15vw, 56px);
+    }
+}
+
+@keyframes mobileFloatOne {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes mobileFloatTwo {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+}
+
+@keyframes mobileFloatThree {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-5px, -6px); }
+}
+
+@keyframes mobileFloatFour {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes mobileFloatCore {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+}
