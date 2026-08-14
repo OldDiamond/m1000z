@@ -1,6 +1,6 @@
-/* =========================================================
+/* =====================================
    SCROLL REVEAL
-========================================================= */
+===================================== */
 
 const revealElements =
     document.querySelectorAll(".reveal-scroll");
@@ -9,9 +9,9 @@ const revealElements =
 const revealObserver =
     new IntersectionObserver(
 
-        (entries) => {
+        entries => {
 
-            entries.forEach((entry) => {
+            entries.forEach(entry => {
 
                 if (entry.isIntersecting) {
 
@@ -26,23 +26,23 @@ const revealObserver =
         },
 
         {
-            threshold: 0.12,
-            rootMargin: "0px 0px -40px 0px"
+            threshold: 0.12
         }
 
     );
 
 
-revealElements.forEach((element) => {
+revealElements.forEach(element => {
 
     revealObserver.observe(element);
 
 });
 
 
-/* =========================================================
+
+/* =====================================
    HERO ART PARALLAX
-========================================================= */
+===================================== */
 
 const heroArt =
     document.getElementById("heroArt");
@@ -53,7 +53,7 @@ if (heroArt) {
     heroArt.addEventListener(
         "mousemove",
 
-        (event) => {
+        event => {
 
             const rect =
                 heroArt.getBoundingClientRect();
@@ -76,22 +76,20 @@ if (heroArt) {
 
 
             const rotateY =
-                ((x - centerX) / centerX) * 3;
+                ((x - centerX) / centerX) * 4;
 
 
             const rotateX =
-                ((centerY - y) / centerY) * 3;
+                ((centerY - y) / centerY) * 4;
 
 
             heroArt.style.transform =
-
-                `
-                perspective(1200px)
-                rotateX(${rotateX}deg)
-                rotateY(${rotateY}deg)
-                `;
+                `perspective(1200px)
+                 rotateX(${rotateX}deg)
+                 rotateY(${rotateY}deg)`;
 
         }
+
     );
 
 
@@ -101,22 +99,19 @@ if (heroArt) {
         () => {
 
             heroArt.style.transform =
-
-                `
-                perspective(1200px)
-                rotateX(0deg)
-                rotateY(0deg)
-                `;
+                "perspective(1200px) rotateX(0deg) rotateY(0deg)";
 
         }
+
     );
 
 }
 
 
-/* =========================================================
+
+/* =====================================
    MOBILE MENU
-========================================================= */
+===================================== */
 
 const mobileMenu =
     document.getElementById("mobileMenu");
@@ -126,113 +121,64 @@ const mobileNavigation =
     document.getElementById("mobileNavigation");
 
 
-if (mobileMenu && mobileNavigation) {
+mobileMenu.addEventListener(
+    "click",
 
-    mobileMenu.addEventListener(
-        "click",
+    () => {
 
-        () => {
+        mobileNavigation.classList.toggle("open");
 
-            const open =
-                mobileNavigation.classList.toggle("open");
+    }
 
-
-            mobileMenu.classList.toggle("active");
+);
 
 
-            mobileMenu.setAttribute(
-                "aria-expanded",
-                String(open)
-            );
+document
+    .querySelectorAll(".mobile-navigation a")
+    .forEach(link => {
 
-        }
-    );
+        link.addEventListener(
+            "click",
 
+            () => {
 
-    document
-        .querySelectorAll(".mobile-navigation a")
-        .forEach((link) => {
+                mobileNavigation.classList.remove("open");
 
-            link.addEventListener(
-                "click",
+            }
 
-                () => {
+        );
 
-                    mobileNavigation
-                        .classList
-                        .remove("open");
+    });
 
 
-                    mobileMenu
-                        .classList
-                        .remove("active");
 
-
-                    mobileMenu.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
-
-                }
-            );
-
-        });
-
-}
-
-
-/* =========================================================
-   HEADER EFFECT
-========================================================= */
+/* =====================================
+   HEADER SHADOW ON SCROLL
+===================================== */
 
 const header =
     document.querySelector(".header");
 
 
-function updateHeader() {
-
-    if (window.scrollY > 30) {
-
-        header.style.boxShadow =
-            "0 12px 35px rgba(0,0,0,0.045)";
-
-    }
-
-    else {
-
-        header.style.boxShadow =
-            "none";
-
-    }
-
-}
-
-
 window.addEventListener(
     "scroll",
-    updateHeader,
-    {
-        passive: true
-    }
-);
 
+    () => {
 
-updateHeader();
+        if (window.scrollY > 30) {
 
+            header.style.boxShadow =
+                "0 10px 35px rgba(0,0,0,.035)";
 
-/* =========================================================
-   EXPERTISE STAGGER
-========================================================= */
+        }
 
-const expertiseItems =
-    document.querySelectorAll(".expertise-item");
+        else {
 
+            header.style.boxShadow =
+                "none";
 
-expertiseItems.forEach(
-    (item, index) => {
-
-        item.style.transitionDelay =
-            `${index * 55}ms`;
+        }
 
     }
+
 );
