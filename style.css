@@ -606,20 +606,20 @@ button {
     letter-spacing: -.11em;
 }
 
-/* NET = BLUE OUTLINE */
+/* NET = BLACK FILL + BLUE OUTLINE */
 .net-word {
-    color: transparent;
+    color: #111111;
 
     -webkit-text-stroke: 3px #84AECD;
     text-stroke: 3px #84AECD;
 }
 
 
-/* NEEDLE = BLACK OUTLINE */
+/* NEEDLE = BLUE FILL + BLACK OUTLINE */
 .needle-word {
     margin-left: 12vw;
 
-    color: transparent;
+    color: #84AECD;
 
     -webkit-text-stroke: 3px #111111;
     text-stroke: 3px #111111;
@@ -1226,8 +1226,16 @@ button {
         font-size: clamp(86px, 28vw, 122px);
     }
 
+    .net-word {
+        -webkit-text-stroke: 2px #84AECD;
+        text-stroke: 2px #84AECD;
+    }
+
     .needle-word {
         margin-left: 0;
+
+        -webkit-text-stroke: 2px #111111;
+        text-stroke: 2px #111111;
     }
 
     .project-content {
