@@ -3,748 +3,352 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Mohammad Yasin — Web Application Security, Penetration Testing, Cybersecurity and Security Automation.">
+    <meta name="theme-color" content="#ffffff">
     <title>Mohammad Yasin | Web Security</title>
-
-    <meta
-        name="description"
-        content="Mohammad Yasin — Web Application Security, Penetration Testing, CWES and Cybersecurity."
-    >
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-
     <script src="script.js" defer></script>
 </head>
 
 <body>
 
-<header class="header">
+<header class="site-header" id="top">
+    <a class="site-brand" href="#home">m1000z</a>
 
-    <div class="header-left">
-
-        <a href="#home" class="site-name">
-            m1000z
-        </a>
-
-    </div>
-
-
-    <div class="center-name">
-
-        <span class="center-avatar">
-            MY
-        </span>
-
-        <span>
-            Mohammad Yasin
-        </span>
-
-    </div>
-
+    <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#education">Education</a>
+        <a href="#work">Work</a>
+        <a href="#certification">Certification</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
     <div class="header-actions">
-
-        <a
-            href="Mohammad-Yasin-CV.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="header-button header-cv"
-        >
-            DOWNLOAD CV
-            <span>↓</span>
+        <a class="header-btn header-btn-dark" href="Mohammad-Yasin-CV.pdf" target="_blank" rel="noopener noreferrer">
+            DOWNLOAD CV <span>↓</span>
         </a>
 
-
-        <a
-            href="https://www.linkedin.com/in/m1000z/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="header-button header-linkedin"
-        >
-            LINKEDIN
-            <span>↗</span>
+        <a class="header-btn header-btn-light" href="https://www.linkedin.com/in/m1000z/" target="_blank" rel="noopener noreferrer">
+            LINKEDIN <span>↗</span>
         </a>
 
-
-        <button
-            class="menu-button"
-            id="menuButton"
-            aria-label="Open menu"
-        >
-            ☰
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+            <span></span>
         </button>
-
     </div>
-
 </header>
 
-
-<nav class="mobile-nav" id="mobileNav">
-
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
     <a href="#about">About</a>
     <a href="#expertise">Expertise</a>
     <a href="#education">Education</a>
     <a href="#work">Net Needle</a>
     <a href="#certification">Certification</a>
     <a href="#contact">Contact</a>
-
-    <a
-        href="Mohammad-Yasin-CV.pdf"
-        target="_blank"
-        class="mobile-cv"
-    >
-        Download CV ↓
-    </a>
-
+    <a class="mobile-cv" href="Mohammad-Yasin-CV.pdf" target="_blank" rel="noopener noreferrer">Download CV ↓</a>
 </nav>
-
 
 <main>
 
-<!-- HERO -->
-<section class="hero" id="home">
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-card">
 
-    <div class="hero-card">
-
-        <div class="hero-small-top">
-
-            <span>
-                CYBERSECURITY PORTFOLIO
-            </span>
-
-            <span>
-                2026
-            </span>
-
-        </div>
-
-
-        <div class="hero-typography">
-
-            <div class="huge-blue">
-                WEB
+            <div class="hero-kicker">
+                <span>CYBERSECURITY PORTFOLIO</span>
+                <span>2026</span>
             </div>
 
-            <div class="huge-black">
-                SECURITY
+            <div class="hero-poster" aria-label="Web Security Specialist">
+                <div class="poster-web">WEB</div>
+                <div class="poster-security">SECURITY</div>
+                <div class="poster-specialist">SPECIALIST</div>
             </div>
 
-            <div class="huge-outline">
-                SPECIALIST
-            </div>
-
-        </div>
-
-
-        <div class="hero-bottom">
-
-            <div class="hero-name-block">
-
-                <span>
-                    MOHAMMAD YASIN
-                </span>
-
-                <h1>
-                    Web Application Security
-                    <br>
-                    & Penetration Testing
-                </h1>
-
-            </div>
-
-
-            <div class="hero-meta">
-
-                <div>
-                    <span>Certification</span>
-                    <strong>HTB CWES</strong>
+            <div class="hero-details">
+                <div class="hero-identity">
+                    <span class="eyebrow">MOHAMMAD YASIN</span>
+                    <h1>Web Application Security<br>& Penetration Testing</h1>
                 </div>
 
-                <div>
-                    <span>Focus</span>
-                    <strong>Web Security</strong>
-                </div>
+                <div class="hero-facts">
+                    <div>
+                        <span>Certification</span>
+                        <strong>HTB CWES</strong>
+                    </div>
 
-                <div>
-                    <span>Education</span>
-                    <strong>BS Computer Science</strong>
-                </div>
+                    <div>
+                        <span>Education</span>
+                        <strong>BS Computer Science</strong>
+                    </div>
 
-                <div>
-                    <span>Availability</span>
-                    <strong>Remote Projects</strong>
-                </div>
+                    <div>
+                        <span>Focus</span>
+                        <strong>Web Security</strong>
+                    </div>
 
+                    <div>
+                        <span>Availability</span>
+                        <strong>Remote Projects</strong>
+                    </div>
+                </div>
             </div>
 
         </div>
-
-    </div>
-
-</section>
+    </section>
 
 
-<!-- INTRO -->
-<section class="intro-section" id="about">
+    <!-- ABOUT -->
+    <section class="section section-white" id="about">
+        <div class="section-index">01 / ABOUT</div>
 
-    <div class="section-label">
-        01 / ABOUT
-    </div>
-
-
-    <div class="intro-grid">
-
-        <h2 class="reveal">
-
-            I identify security
-            weaknesses before
-            they become problems.
-
-        </h2>
-
-
-        <div class="intro-copy reveal">
-
-            <p class="intro-lead">
-
-                CWES-certified cybersecurity practitioner specializing
-                in web application security, penetration testing and
-                vulnerability assessment.
-
-            </p>
-
-            <p>
-
-                My practical experience includes OWASP Top 10,
-                SQL Injection, Cross-Site Scripting, authentication
-                weaknesses, session management, security automation,
-                CVE/CWE mapping and technical security reporting.
-
-            </p>
-
-
-            <div class="intro-contact">
-
-                <a href="mailto:yasinnadeemswiss@gmail.com">
-                    yasinnadeemswiss@gmail.com ↗
-                </a>
-
-                <a
-                    href="https://www.linkedin.com/in/m1000z/"
-                    target="_blank"
-                >
-                    LinkedIn ↗
-                </a>
-
+        <div class="two-column">
+            <div class="display-heading reveal">
+                <h2>
+                    I identify security weaknesses
+                    <span>before they become problems.</span>
+                </h2>
             </div>
 
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- EXPERTISE -->
-<section class="expertise-section" id="expertise">
-
-    <div class="section-label">
-        02 / EXPERTISE
-    </div>
-
-
-    <div class="section-title">
-
-        <h2>
-            Security
-            <span>Capabilities.</span>
-        </h2>
-
-    </div>
-
-
-    <div class="expertise-list">
-
-        <article class="skill-row reveal">
-
-            <span class="skill-number">
-                01
-            </span>
-
-            <h3>
-                Web Application Security
-            </h3>
-
-            <p>
-                OWASP Top 10, SQL Injection, XSS,
-                authentication and session security.
-            </p>
-
-            <span class="arrow">
-                ↗
-            </span>
-
-        </article>
-
-
-        <article class="skill-row reveal">
-
-            <span class="skill-number">
-                02
-            </span>
-
-            <h3>
-                Penetration Testing
-            </h3>
-
-            <p>
-                Burp Suite, Nmap, reconnaissance,
-                vulnerability testing and web exploitation.
-            </p>
-
-            <span class="arrow">
-                ↗
-            </span>
-
-        </article>
-
-
-        <article class="skill-row reveal">
-
-            <span class="skill-number">
-                03
-            </span>
-
-            <h3>
-                Security Automation
-            </h3>
-
-            <p>
-                Python, PowerShell, JavaScript and SQL
-                for security and administration workflows.
-            </p>
-
-            <span class="arrow">
-                ↗
-            </span>
-
-        </article>
-
-
-        <article class="skill-row reveal">
-
-            <span class="skill-number">
-                04
-            </span>
-
-            <h3>
-                Vulnerability Management
-            </h3>
-
-            <p>
-                CVE/CWE mapping, vulnerability classification,
-                remediation guidance and security reporting.
-            </p>
-
-            <span class="arrow">
-                ↗
-            </span>
-
-        </article>
-
-
-        <article class="skill-row reveal">
-
-            <span class="skill-number">
-                05
-            </span>
-
-            <h3>
-                Linux & Windows
-            </h3>
-
-            <p>
-                System troubleshooting, remote support,
-                administration fundamentals and root-cause analysis.
-            </p>
-
-            <span class="arrow">
-                ↗
-            </span>
-
-        </article>
-
-    </div>
-
-</section>
-
-
-
-<!-- EDUCATION -->
-<section class="education-section" id="education">
-
-    <div class="section-label">
-        03 / EDUCATION
-    </div>
-
-
-    <div class="education-grid">
-
-        <div class="education-title reveal">
-
-            <h2>
-                Computer Science
-                <span>Foundation.</span>
-            </h2>
-
-        </div>
-
-
-        <div class="education-card reveal">
-
-            <div class="education-card-top">
-
-                <span class="education-year">
-                    2022 — 2026
-                </span>
-
-                <span class="education-status">
-                    BACHELOR'S DEGREE
-                </span>
-
-            </div>
-
-
-            <div class="education-card-main">
-
-                <span class="education-small">
-                    EDUCATION
-                </span>
-
-                <h3>
-                    Bachelor of Science
-                    <br>
-                    in Computer Science
-                </h3>
-
-                <p class="education-short">
-                    BSCS
+            <div class="body-copy reveal">
+                <p class="lead">
+                    CWES-certified cybersecurity practitioner specializing in web application security, penetration testing and vulnerability assessment.
                 </p>
-
-                <p class="education-description">
-                    Building a strong computer science foundation alongside
-                    practical specialization in cybersecurity, web application
-                    security, security automation and software development.
-                </p>
-
-            </div>
-
-
-            <div class="education-tags">
-
-                <span>Computer Science</span>
-                <span>Cybersecurity</span>
-                <span>Web Security</span>
-                <span>Software Development</span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- PROJECT -->
-<section class="project-section" id="work">
-
-    <div class="project-top">
-
-        <span>
-            04 / FEATURED PROJECT
-        </span>
-
-        <span>
-            2025 — 2026
-        </span>
-
-    </div>
-
-
-    <div class="project-title">
-
-        <span class="project-net">
-            NET
-        </span>
-
-        <span class="project-needle">
-            NEEDLE
-        </span>
-
-    </div>
-
-
-    <div class="project-grid">
-
-        <div class="project-main reveal">
-
-            <h2>
-                AI-guided web
-                vulnerability assessment.
-            </h2>
-
-            <p>
-
-                Net Needle is a cloud-based web security platform
-                designed to streamline technology detection,
-                contextual security scanning, vulnerability management,
-                CVE/CWE mapping and actionable reporting.
-
-            </p>
-
-
-            <a
-                href="https://netneedle.co"
-                target="_blank"
-                class="project-link"
-            >
-                VISIT NETNEEDLE.CO ↗
-            </a>
-
-        </div>
-
-
-        <div class="project-features">
-
-            <div class="feature reveal">
-
-                <span>01</span>
-
-                <div>
-                    <h3>Cloud Scanning</h3>
-                    <p>No local installation required.</p>
-                </div>
-
-            </div>
-
-
-            <div class="feature reveal">
-
-                <span>02</span>
-
-                <div>
-                    <h3>Technology Detection</h3>
-                    <p>Browser-assisted target identification.</p>
-                </div>
-
-            </div>
-
-
-            <div class="feature reveal">
-
-                <span>03</span>
-
-                <div>
-                    <h3>CVE / CWE Mapping</h3>
-                    <p>Structured vulnerability classification.</p>
-                </div>
-
-            </div>
-
-
-            <div class="feature reveal">
-
-                <span>04</span>
-
-                <div>
-                    <h3>Security Reports</h3>
-                    <p>Actionable vulnerability reporting.</p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- CERTIFICATION -->
-<section class="cert-section" id="certification">
-
-    <div class="section-label">
-        05 / CERTIFICATION
-    </div>
-
-
-    <div class="cert-grid">
-
-        <div class="cert-title reveal">
-
-            <h2>
-                Certified through
-                <span>practice.</span>
-            </h2>
-
-        </div>
-
-
-        <a
-            href="https://www.credly.com/badges/cdfba656-fdcd-4437-8a64-949381229c4d/public_url"
-            target="_blank"
-            class="cert-card reveal"
-        >
-
-            <div class="cert-card-top">
-
-                <div class="cert-circle">
-                    HTB
-                </div>
-
-                <span>
-                    HACK THE BOX
-                </span>
-
-            </div>
-
-
-            <div>
-
-                <span class="cert-small">
-                    PROFESSIONAL CERTIFICATION
-                </span>
-
-                <h3>
-
-                    Certified Web
-                    <br>
-                    Exploitation Specialist
-
-                </h3>
 
                 <p>
-                    HTB CWES
+                    My practical experience includes OWASP Top 10, SQL Injection, Cross-Site Scripting, authentication weaknesses, session management, security automation, CVE/CWE mapping and technical security reporting.
                 </p>
 
+                <p>
+                    I combine offensive security knowledge with software development to build practical security tools and clearer assessment workflows.
+                </p>
+
+                <div class="inline-links">
+                    <a href="mailto:yasinnadeemswiss@gmail.com">EMAIL ↗</a>
+                    <a href="https://www.linkedin.com/in/m1000z/" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a>
+                </div>
             </div>
+        </div>
+    </section>
 
 
-            <div class="cert-bottom">
+    <!-- EXPERTISE -->
+    <section class="section section-soft" id="expertise">
+        <div class="section-index">02 / EXPERTISE</div>
 
-                <span>
-                    VERIFY CREDENTIAL
-                </span>
-
-                <span>
-                    ↗
-                </span>
-
-            </div>
-
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- CONTACT -->
-<section class="contact-section" id="contact">
-
-    <div class="contact-top">
-
-        <span>
-            06 / CONTACT
-        </span>
-
-    </div>
-
-
-    <h2 class="reveal">
-
-        LET'S
-        <span>
-            WORK
-        </span>
-        TOGETHER
-
-    </h2>
-
-
-    <div class="contact-grid">
-
-        <p>
-
-            Available for web application security,
-            penetration testing, vulnerability assessment
-            and remote cybersecurity projects.
-
-        </p>
-
-
-        <div class="contact-links">
-
-            <a href="mailto:yasinnadeemswiss@gmail.com">
-                EMAIL ↗
-            </a>
-
-            <a
-                href="https://www.linkedin.com/in/m1000z/"
-                target="_blank"
-            >
-                LINKEDIN ↗
-            </a>
-
-            <a
-                href="Mohammad-Yasin-CV.pdf"
-                target="_blank"
-            >
-                DOWNLOAD CV ↓
-            </a>
-
+        <div class="wide-heading reveal">
+            <h2>Security <span>Capabilities.</span></h2>
         </div>
 
-    </div>
+        <div class="row-list">
+            <article class="info-row reveal">
+                <span class="row-no">01</span>
+                <h3>Web Application Security</h3>
+                <p>OWASP Top 10, SQL Injection, XSS, authentication, session security and vulnerability assessment.</p>
+                <span class="row-arrow">↗</span>
+            </article>
 
-</section>
+            <article class="info-row reveal">
+                <span class="row-no">02</span>
+                <h3>Penetration Testing</h3>
+                <p>Manual testing, reconnaissance, vulnerability validation, Burp Suite, Nmap and web exploitation.</p>
+                <span class="row-arrow">↗</span>
+            </article>
+
+            <article class="info-row reveal">
+                <span class="row-no">03</span>
+                <h3>Security Automation</h3>
+                <p>Python, PowerShell, JavaScript and SQL for security workflows, scripting and technical automation.</p>
+                <span class="row-arrow">↗</span>
+            </article>
+
+            <article class="info-row reveal">
+                <span class="row-no">04</span>
+                <h3>Vulnerability Management</h3>
+                <p>CVE/CWE mapping, vulnerability classification, remediation guidance and actionable reporting.</p>
+                <span class="row-arrow">↗</span>
+            </article>
+
+            <article class="info-row reveal">
+                <span class="row-no">05</span>
+                <h3>Linux & Windows</h3>
+                <p>System troubleshooting, remote technical support, administration fundamentals and root-cause analysis.</p>
+                <span class="row-arrow">↗</span>
+            </article>
+        </div>
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section class="section section-white" id="education">
+        <div class="section-index">03 / EDUCATION</div>
+
+        <div class="wide-heading education-heading reveal">
+            <h2>Computer Science <span>Foundation.</span></h2>
+        </div>
+
+        <div class="education-layout">
+
+            <div class="education-primary reveal">
+                <div class="education-years">2022 — 2026</div>
+                <div class="education-degree">
+                    <span>BACHELOR'S DEGREE</span>
+                    <h3>Bachelor of Science<br>in Computer Science</h3>
+                    <strong>BSCS</strong>
+                </div>
+            </div>
+
+            <div class="education-copy reveal">
+                <p class="lead">
+                    A computer science foundation that supports my practical cybersecurity work.
+                </p>
+
+                <p>
+                    My studies build core knowledge across software development, systems, databases and computing concepts while my technical focus extends into web application security, penetration testing and security automation.
+                </p>
+
+                <div class="pill-group">
+                    <span>Computer Science</span>
+                    <span>Cybersecurity</span>
+                    <span>Web Security</span>
+                    <span>Software Development</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- NET NEEDLE -->
+    <section class="section section-soft project-section" id="work">
+        <div class="section-index project-index">04 / FEATURED PROJECT</div>
+
+        <div class="project-wordmark reveal" aria-label="Net Needle">
+            <span class="net-word">NET</span>
+            <span class="needle-word">NEEDLE</span>
+        </div>
+
+        <div class="project-content">
+
+            <div class="project-intro reveal">
+                <h2>AI-guided web vulnerability assessment.</h2>
+
+                <p>
+                    Net Needle is a cloud-based web security platform designed to streamline technology detection, contextual security scanning, vulnerability management, CVE/CWE mapping and actionable reporting.
+                </p>
+
+                <a href="https://netneedle.co" target="_blank" rel="noopener noreferrer">
+                    VISIT NETNEEDLE.CO ↗
+                </a>
+            </div>
+
+            <div class="project-features">
+                <div class="feature-row reveal">
+                    <span>01</span>
+                    <div>
+                        <h3>Cloud Scanning</h3>
+                        <p>No local installation required.</p>
+                    </div>
+                </div>
+
+                <div class="feature-row reveal">
+                    <span>02</span>
+                    <div>
+                        <h3>Technology Detection</h3>
+                        <p>Browser-assisted target identification.</p>
+                    </div>
+                </div>
+
+                <div class="feature-row reveal">
+                    <span>03</span>
+                    <div>
+                        <h3>CVE / CWE Mapping</h3>
+                        <p>Structured vulnerability classification.</p>
+                    </div>
+                </div>
+
+                <div class="feature-row reveal">
+                    <span>04</span>
+                    <div>
+                        <h3>Security Reports</h3>
+                        <p>Actionable vulnerability reporting.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CERTIFICATION -->
+    <section class="section section-white" id="certification">
+        <div class="section-index">05 / CERTIFICATION</div>
+
+        <div class="wide-heading reveal">
+            <h2>Certified through <span>practice.</span></h2>
+        </div>
+
+        <a class="credential-card reveal"
+           href="https://www.credly.com/badges/cdfba656-fdcd-4437-8a64-949381229c4d/public_url"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            <div class="credential-top">
+                <div class="credential-logo">HTB</div>
+                <span>HACK THE BOX</span>
+            </div>
+
+            <div class="credential-main">
+                <span>PROFESSIONAL CERTIFICATION</span>
+                <h3>Certified Web<br>Exploitation Specialist</h3>
+                <strong>HTB CWES</strong>
+            </div>
+
+            <div class="credential-bottom">
+                <span>VERIFY CREDENTIAL</span>
+                <span>↗</span>
+            </div>
+        </a>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+        <div class="contact-index">06 / CONTACT</div>
+
+        <h2 class="reveal">LET'S <span>WORK</span> TOGETHER</h2>
+
+        <div class="contact-bottom">
+            <p>
+                Available for web application security, penetration testing, vulnerability assessment and remote cybersecurity projects.
+            </p>
+
+            <div class="contact-links">
+                <a href="mailto:yasinnadeemswiss@gmail.com">EMAIL ↗</a>
+                <a href="https://www.linkedin.com/in/m1000z/" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a>
+                <a href="Mohammad-Yasin-CV.pdf" target="_blank" rel="noopener noreferrer">DOWNLOAD CV ↓</a>
+            </div>
+        </div>
+    </section>
 
 </main>
 
-
-<footer>
-
+<footer class="site-footer">
     <div>
-
-        <strong>
-            Mohammad Yasin
-        </strong>
-
-        <span>
-            Web Application Security
-        </span>
-
+        <strong>Mohammad Yasin</strong>
+        <span>Web Application Security</span>
     </div>
 
+    <span>© 2026</span>
 
-    <span>
-        © 2026
-    </span>
-
-
-    <a href="#home">
-        BACK TO TOP ↑
-    </a>
-
+    <a href="#top">BACK TO TOP ↑</a>
 </footer>
 
 </body>
