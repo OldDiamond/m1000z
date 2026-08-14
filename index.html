@@ -21,206 +21,6 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <style>
-        /* Header readability + explicit action buttons */
-        .header {
-            min-height: 96px;
-            padding: 0 32px;
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
-            align-items: center;
-            gap: 30px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(255,255,255,.96);
-            backdrop-filter: blur(18px);
-            border-bottom: 1px solid rgba(0,0,0,.05);
-        }
-
-        .header-left {
-            display: flex;
-            align-items: center;
-        }
-
-        .site-name {
-            font-size: 18px;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-        }
-
-        .center-name {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 17px;
-            font-weight: 700;
-        }
-
-        .center-avatar {
-            width: 42px;
-            height: 42px;
-            display: grid;
-            place-items: center;
-            border-radius: 50%;
-            background: #dedede;
-            font-size: 10px;
-            font-weight: 700;
-        }
-
-        .header-actions {
-            justify-self: end;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .header-button {
-            min-height: 48px;
-            padding: 0 20px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            border: 1px solid #111;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: .04em;
-            transition: background .25s ease, color .25s ease, transform .25s ease;
-        }
-
-        .header-button span {
-            font-size: 16px;
-            transition: transform .25s ease;
-        }
-
-        .header-cv {
-            background: #111;
-            color: #fff;
-        }
-
-        .header-cv:hover {
-            background: #73b1d2;
-            color: #111;
-            transform: translateY(-2px);
-        }
-
-        .header-cv:hover span {
-            transform: translateY(3px);
-        }
-
-        .header-linkedin {
-            background: #fff;
-            color: #111;
-        }
-
-        .header-linkedin:hover {
-            background: #111;
-            color: #fff;
-            transform: translateY(-2px);
-        }
-
-        .header-linkedin:hover span {
-            transform: translate(3px,-3px);
-        }
-
-        /* Increase tiny labels across the site */
-        .hero-small-top {
-            font-size: 12px !important;
-            font-weight: 600;
-            letter-spacing: .13em;
-        }
-
-        .section-label {
-            font-size: 12px !important;
-            font-weight: 600;
-            letter-spacing: .13em;
-        }
-
-        .project-top {
-            font-size: 12px !important;
-            font-weight: 600;
-        }
-
-        .hero-name-block > span {
-            font-size: 12px !important;
-            font-weight: 600;
-        }
-
-        .hero-meta span {
-            font-size: 11px !important;
-        }
-
-        .hero-meta strong {
-            font-size: 14px !important;
-        }
-
-        .skill-number {
-            font-size: 11px !important;
-            font-weight: 600;
-        }
-
-        .cert-card-top > span,
-        .cert-small {
-            font-size: 10px !important;
-            font-weight: 600;
-        }
-
-        .cert-bottom {
-            font-size: 11px !important;
-            font-weight: 600;
-        }
-
-        .contact-top {
-            font-size: 12px !important;
-            font-weight: 600;
-        }
-
-        footer {
-            font-size: 11px !important;
-        }
-
-        @media (max-width: 760px) {
-            .header {
-                min-height: 76px;
-                padding: 0 18px;
-                grid-template-columns: 1fr auto;
-            }
-
-            .center-name {
-                display: none;
-            }
-
-            .header-actions {
-                gap: 8px;
-            }
-
-            .header-linkedin {
-                display: none;
-            }
-
-            .header-cv {
-                min-height: 42px;
-                padding: 0 13px;
-                font-size: 10px;
-            }
-
-            .menu-button {
-                display: block !important;
-            }
-
-            .hero-small-top {
-                font-size: 9px !important;
-            }
-
-            .section-label,
-            .project-top {
-                font-size: 10px !important;
-            }
-        }
-    </style>
-
-
     <script src="script.js" defer></script>
 </head>
 
@@ -240,7 +40,7 @@
     <div class="center-name">
 
         <span class="center-avatar">
-            *
+            MY
         </span>
 
         <span>
@@ -291,6 +91,7 @@
 
     <a href="#about">About</a>
     <a href="#expertise">Expertise</a>
+    <a href="#education">Education</a>
     <a href="#work">Net Needle</a>
     <a href="#certification">Certification</a>
     <a href="#contact">Contact</a>
@@ -348,7 +149,7 @@
             <div class="hero-name-block">
 
                 <span>
-                    
+                    MOHAMMAD YASIN
                 </span>
 
                 <h1>
@@ -370,6 +171,11 @@
                 <div>
                     <span>Focus</span>
                     <strong>Web Security</strong>
+                </div>
+
+                <div>
+                    <span>Education</span>
+                    <strong>BS Computer Science</strong>
                 </div>
 
                 <div>
@@ -581,13 +387,90 @@
 </section>
 
 
+
+<!-- EDUCATION -->
+<section class="education-section" id="education">
+
+    <div class="section-label">
+        03 / EDUCATION
+    </div>
+
+
+    <div class="education-grid">
+
+        <div class="education-title reveal">
+
+            <h2>
+                Computer Science
+                <span>Foundation.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="education-card reveal">
+
+            <div class="education-card-top">
+
+                <span class="education-year">
+                    2022 — 2026
+                </span>
+
+                <span class="education-status">
+                    BACHELOR'S DEGREE
+                </span>
+
+            </div>
+
+
+            <div class="education-card-main">
+
+                <span class="education-small">
+                    EDUCATION
+                </span>
+
+                <h3>
+                    Bachelor of Science
+                    <br>
+                    in Computer Science
+                </h3>
+
+                <p class="education-short">
+                    BSCS
+                </p>
+
+                <p class="education-description">
+                    Building a strong computer science foundation alongside
+                    practical specialization in cybersecurity, web application
+                    security, security automation and software development.
+                </p>
+
+            </div>
+
+
+            <div class="education-tags">
+
+                <span>Computer Science</span>
+                <span>Cybersecurity</span>
+                <span>Web Security</span>
+                <span>Software Development</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 <!-- PROJECT -->
 <section class="project-section" id="work">
 
     <div class="project-top">
 
         <span>
-            03 / FEATURED PROJECT
+            04 / FEATURED PROJECT
         </span>
 
         <span>
@@ -700,7 +583,7 @@
 <section class="cert-section" id="certification">
 
     <div class="section-label">
-        04 / CERTIFICATION
+        05 / CERTIFICATION
     </div>
 
 
@@ -781,7 +664,7 @@
     <div class="contact-top">
 
         <span>
-            05 / CONTACT
+            06 / CONTACT
         </span>
 
     </div>
