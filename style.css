@@ -1,14 +1,28 @@
 :root {
-    --white: #ffffff;
-    --soft: #f3f3f1;
-    --soft-2: #ececea;
+    /*
+       Main blue sampled from the WEB lettering
+       in the supplied reference image:
+       RGB 132, 174, 205
+    */
+    --blue: #84AECD;
+    --blue-hover: #72A2C5;
+    --blue-soft: #E8F0F5;
+
+    --white: #FFFFFF;
+    --paper: #F1F1EF;
+    --paper-dark: #E9E9E6;
+
     --black: #080808;
-    --gray: #6b6b6b;
-    --border: #cfcfcb;
-    --blue: #77afd0;
-    --accent: #312cf2;
+    --gray: #6A6A68;
+    --border: #CECECA;
+
     --max: 1720px;
 }
+
+
+/* =========================================================
+   RESET
+========================================================= */
 
 * {
     margin: 0;
@@ -22,8 +36,8 @@ html {
 
 body {
     font-family: "Inter", sans-serif;
-    background: var(--white);
     color: var(--black);
+    background: var(--white);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
 }
@@ -47,9 +61,8 @@ button {
     padding: 0 32px;
 
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    gap: 35px;
 
     position: sticky;
     top: 0;
@@ -59,10 +72,12 @@ button {
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 
-    border-bottom: 1px solid rgba(0,0,0,.05);
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
 }
 
 .site-brand {
+    justify-self: start;
+
     font-size: 18px;
     font-weight: 800;
     letter-spacing: -.04em;
@@ -70,29 +85,57 @@ button {
 
 .desktop-nav {
     justify-self: center;
+
     display: flex;
-    gap: 28px;
+    align-items: center;
+    gap: 30px;
 }
 
 .desktop-nav a {
+    position: relative;
+
     font-size: 12px;
     font-weight: 600;
 }
 
+.desktop-nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 1px;
+
+    background: #111;
+
+    transition: width .25s ease;
+}
+
+.desktop-nav a:hover::after {
+    width: 100%;
+}
+
 .header-actions {
+    justify-self: end;
+
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.header-btn {
+.header-cv {
     min-height: 46px;
-    padding: 0 17px;
+    padding: 0 18px;
 
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 11px;
+    gap: 12px;
+
+    color: #111;
+    background: var(--blue);
 
     border: 1px solid #111;
 
@@ -106,26 +149,15 @@ button {
         color .25s ease;
 }
 
-.header-btn-dark {
+.header-cv:hover {
     color: #fff;
     background: #111;
-}
 
-.header-btn-dark:hover {
-    color: #111;
-    background: var(--blue);
     transform: translateY(-2px);
 }
 
-.header-btn-light {
-    color: #111;
-    background: #fff;
-}
-
-.header-btn-light:hover {
-    color: #fff;
-    background: #111;
-    transform: translateY(-2px);
+.header-cv span {
+    font-size: 15px;
 }
 
 .menu-toggle {
@@ -140,9 +172,12 @@ button {
 
 .menu-toggle span {
     display: block;
+
     width: 100%;
     height: 1px;
+
     background: #111;
+
     transition: transform .3s ease;
 }
 
@@ -174,14 +209,15 @@ button {
 .hero-card {
     width: min(100%, var(--max));
     min-height: 790px;
-    margin: 0 auto;
 
+    margin: 0 auto;
     padding: 40px 56px 44px;
 
     position: relative;
     overflow: hidden;
 
-    background: var(--soft);
+    background: var(--paper);
+
     border-radius: 28px;
 }
 
@@ -189,10 +225,11 @@ button {
     display: flex;
     justify-content: space-between;
 
+    color: var(--gray);
+
     font-size: 11px;
     font-weight: 700;
     letter-spacing: .14em;
-    color: var(--gray);
 }
 
 .hero-poster {
@@ -240,7 +277,6 @@ button {
 
     font-size: clamp(52px, 8.4vw, 136px);
     font-weight: 400;
-
     letter-spacing: .01em;
 
     -webkit-text-stroke: 2px #111;
@@ -286,9 +322,10 @@ button {
 }
 
 .hero-facts span {
+    color: var(--gray);
+
     font-size: 11px;
     font-weight: 600;
-    color: var(--gray);
 }
 
 .hero-facts strong {
@@ -310,7 +347,7 @@ button {
 }
 
 .section-soft {
-    background: var(--soft);
+    background: var(--paper);
 }
 
 .section-index,
@@ -332,6 +369,8 @@ button {
 
 .display-heading h2,
 .wide-heading h2 {
+    color: #111;
+
     font-weight: 500;
     letter-spacing: -.075em;
 }
@@ -341,10 +380,11 @@ button {
     line-height: .95;
 }
 
+/* Every previous cobalt/purple accent now uses WEB blue */
 .display-heading h2 span,
 .wide-heading h2 span,
 .education-title h2 span {
-    color: var(--accent);
+    color: var(--blue);
 }
 
 .body-copy {
@@ -355,7 +395,7 @@ button {
 .education-copy p {
     margin-bottom: 24px;
 
-    color: #666;
+    color: #656563;
 
     font-size: 15px;
     line-height: 1.75;
@@ -364,6 +404,7 @@ button {
 .body-copy .lead,
 .education-copy .lead {
     color: #111;
+
     font-size: 20px;
     line-height: 1.55;
 }
@@ -379,6 +420,7 @@ button {
 
 .inline-links a {
     padding-bottom: 4px;
+
     border-bottom: 1px solid #111;
 
     font-size: 11px;
@@ -421,11 +463,13 @@ button {
 .info-row:hover {
     padding-left: 16px;
     padding-right: 12px;
+
     background: #fff;
 }
 
 .row-no {
-    color: var(--accent);
+    color: var(--blue);
+
     font-size: 11px;
     font-weight: 700;
 }
@@ -438,12 +482,16 @@ button {
 
 .info-row p {
     color: #666;
+
     font-size: 13px;
     line-height: 1.65;
 }
 
 .row-arrow {
     justify-self: end;
+
+    color: var(--blue);
+
     font-size: 20px;
 }
 
@@ -477,7 +525,7 @@ button {
 }
 
 .education-years {
-    color: var(--accent);
+    color: var(--blue);
 
     font-size: 13px;
     font-weight: 700;
@@ -505,7 +553,7 @@ button {
     display: inline-block;
     margin-top: 22px;
 
-    color: var(--accent);
+    color: var(--blue);
 
     font-size: 14px;
     letter-spacing: .12em;
@@ -526,7 +574,10 @@ button {
 .pill-group span {
     padding: 8px 11px;
 
-    border: 1px solid #bfbfbb;
+    color: #111;
+    background: var(--blue-soft);
+
+    border: 1px solid #AFC7D8;
     border-radius: 999px;
 
     font-size: 10px;
@@ -561,6 +612,7 @@ button {
 
 .needle-word {
     margin-left: 12vw;
+
     color: var(--blue);
 }
 
@@ -597,7 +649,7 @@ button {
     margin-top: 34px;
     padding-bottom: 5px;
 
-    border-bottom: 1px solid #111;
+    border-bottom: 2px solid var(--blue);
 
     font-size: 11px;
     font-weight: 700;
@@ -618,7 +670,7 @@ button {
 }
 
 .feature-row > span {
-    color: var(--accent);
+    color: var(--blue);
 
     font-size: 11px;
     font-weight: 700;
@@ -633,6 +685,7 @@ button {
 
 .feature-row p {
     color: #666;
+
     font-size: 12px;
 }
 
@@ -644,6 +697,7 @@ button {
 .credential-card {
     width: min(640px, 100%);
     min-height: 500px;
+
     margin-left: auto;
     padding: 38px;
 
@@ -651,7 +705,7 @@ button {
     flex-direction: column;
     justify-content: space-between;
 
-    background: var(--soft);
+    background: var(--paper);
 
     border: 1px solid var(--border);
     border-radius: 24px;
@@ -663,6 +717,7 @@ button {
 
 .credential-card:hover {
     transform: translateY(-8px);
+
     box-shadow: 0 25px 70px rgba(0,0,0,.08);
 }
 
@@ -679,10 +734,11 @@ button {
     display: grid;
     place-items: center;
 
-    border-radius: 50%;
-
     color: #111;
     background: var(--blue);
+
+    border: 1px solid #111;
+    border-radius: 50%;
 
     font-size: 11px;
     font-weight: 800;
@@ -710,7 +766,7 @@ button {
     display: inline-block;
     margin-top: 14px;
 
-    color: var(--accent);
+    color: var(--blue);
 
     font-size: 12px;
     letter-spacing: .12em;
@@ -748,6 +804,8 @@ button {
 
 .contact-section h2 {
     margin-top: 70px;
+
+    color: #111;
 
     font-size: clamp(88px, 16vw, 250px);
     font-weight: 900;
@@ -819,7 +877,8 @@ button {
 
 .site-footer div span {
     margin-top: 3px;
-    color: #777;
+
+    color: #8D8D8A;
 }
 
 .site-footer > a {
@@ -828,11 +887,12 @@ button {
 
 
 /* =========================================================
-   REVEAL ANIMATION
+   ANIMATION
 ========================================================= */
 
 .reveal {
     opacity: 0;
+
     transform: translateY(28px);
 
     transition:
@@ -842,6 +902,7 @@ button {
 
 .reveal.visible {
     opacity: 1;
+
     transform: translateY(0);
 }
 
@@ -866,8 +927,10 @@ button {
 
     .mobile-menu {
         position: fixed;
+
         top: 94px;
         left: 0;
+
         z-index: 999;
 
         width: 100%;
@@ -878,6 +941,7 @@ button {
         gap: 18px;
 
         background: #fff;
+
         border-top: 1px solid var(--border);
 
         transform: translateY(-140%);
@@ -891,6 +955,7 @@ button {
 
     .mobile-menu.open {
         transform: translateY(0);
+
         opacity: 1;
         pointer-events: auto;
     }
@@ -904,8 +969,10 @@ button {
         margin-top: 12px;
         padding: 14px;
 
-        color: #fff;
-        background: #111;
+        color: #111;
+        background: var(--blue);
+
+        border: 1px solid #111;
 
         text-align: center;
     }
@@ -951,6 +1018,7 @@ button {
     .credential-card {
         margin-left: 0;
     }
+
 }
 
 
@@ -973,15 +1041,15 @@ button {
         gap: 7px;
     }
 
-    .header-btn-light {
-        display: none;
-    }
-
-    .header-btn-dark {
+    .header-cv {
         min-height: 40px;
         padding: 0 11px;
 
         font-size: 9px;
+    }
+
+    .header-cv span {
+        font-size: 12px;
     }
 
     .menu-toggle {
@@ -1100,6 +1168,7 @@ button {
 
     .info-row {
         grid-template-columns: 30px 1fr 24px;
+
         gap: 10px;
         padding: 25px 0;
     }
@@ -1110,6 +1179,7 @@ button {
 
     .info-row p {
         grid-column: 2;
+
         font-size: 12px;
     }
 
@@ -1135,6 +1205,7 @@ button {
 
     .education-degree h3 {
         margin-top: 14px;
+
         font-size: 38px;
     }
 
@@ -1202,11 +1273,12 @@ button {
     .site-footer > a {
         justify-self: start;
     }
+
 }
 
 
 /* =========================================================
-   EXTRA SMALL MOBILE
+   SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 420px) {
@@ -1221,11 +1293,13 @@ button {
 
     .poster-security {
         top: 174px;
+
         font-size: 72px;
     }
 
     .poster-specialist {
         top: 250px;
+
         font-size: 39px;
     }
 
@@ -1248,6 +1322,7 @@ button {
     .contact-section h2 {
         font-size: 66px;
     }
+
 }
 
 
@@ -1256,9 +1331,11 @@ button {
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
+
     * {
         scroll-behavior: auto !important;
         animation: none !important;
         transition: none !important;
     }
+
 }
