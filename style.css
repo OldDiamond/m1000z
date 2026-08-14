@@ -1500,6 +1500,235 @@ button {
 
 }
 
+
+/* =========================================================
+   FINAL MOBILE ALIGNMENT FIX
+   Keeps every section on the same horizontal grid and
+   prevents large headings from pushing the layout sideways.
+========================================================= */
+
+@media (max-width: 700px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        overflow-x: clip;
+    }
+
+    main {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    /*
+       Use one consistent mobile gutter everywhere.
+       This keeps About, Expertise, Education, Project,
+       Certification, Contact and Footer aligned.
+    */
+    .section,
+    .contact-section,
+    .site-footer {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .hero {
+        width: 100%;
+        max-width: 100%;
+
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .hero-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /*
+       Prevent any text/grid child from forcing its parent
+       wider than the phone viewport.
+    */
+    .two-column,
+    .education-layout,
+    .education-primary,
+    .project-content,
+    .project-features,
+    .credential-card,
+    .contact-bottom,
+    .contact-links,
+    .hero-details,
+    .hero-facts {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .two-column > *,
+    .education-layout > *,
+    .project-content > *,
+    .contact-bottom > *,
+    .hero-details > * {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    /*
+       Large headings now scale from the actual viewport,
+       instead of using desktop-sized fixed values.
+    */
+    .display-heading h2 {
+        max-width: 100%;
+
+        font-size: clamp(40px, 11.5vw, 48px);
+        line-height: .96;
+        letter-spacing: -.065em;
+    }
+
+    .wide-heading h2 {
+        max-width: 100%;
+
+        font-size: clamp(46px, 13vw, 56px);
+        line-height: .90;
+        letter-spacing: -.07em;
+    }
+
+    .education-degree h3 {
+        max-width: 100%;
+
+        font-size: clamp(32px, 9vw, 38px);
+    }
+
+    .project-intro h2 {
+        max-width: 100%;
+
+        font-size: clamp(34px, 10.5vw, 40px);
+        line-height: 1.02;
+    }
+
+    /*
+       Contact heading was the largest remaining source
+       of mobile misalignment.
+    */
+    .contact-section h2 {
+        width: 100%;
+        max-width: 100%;
+
+        margin-top: 48px;
+
+        font-size: clamp(52px, 14.5vw, 62px);
+        line-height: .82;
+        letter-spacing: -.075em;
+
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    .contact-bottom {
+        margin-top: 58px;
+
+        grid-template-columns: minmax(0, 1fr);
+        gap: 34px;
+    }
+
+    .contact-bottom p {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: 16px;
+        line-height: 1.55;
+    }
+
+    .contact-links {
+        align-items: flex-start;
+    }
+
+    .contact-links a {
+        max-width: 100%;
+
+        font-size: 15px;
+    }
+
+    .site-footer {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    /*
+       Keep the Net Needle wordmark fully inside the same
+       24px mobile content grid.
+    */
+    .project-wordmark {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .net-word {
+        font-size: clamp(68px, 20.5vw, 88px);
+    }
+
+    .needle-word {
+        font-size: clamp(44px, 14.7vw, 61px);
+        letter-spacing: -.055em;
+    }
+}
+
+
+@media (max-width: 420px) {
+
+    .section,
+    .contact-section,
+    .site-footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .contact-section h2 {
+        font-size: clamp(48px, 14vw, 58px);
+    }
+
+    .net-word {
+        font-size: clamp(64px, 20vw, 82px);
+    }
+
+    .needle-word {
+        font-size: clamp(42px, 14.4vw, 58px);
+    }
+}
+
+
+@media (max-width: 360px) {
+
+    .section,
+    .contact-section,
+    .site-footer {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .contact-section h2 {
+        font-size: 48px;
+    }
+
+    .net-word {
+        font-size: 62px;
+    }
+
+    .needle-word {
+        font-size: 40px;
+    }
+}
+
+
 /* =========================================================
    ACCESSIBILITY
 ========================================================= */
