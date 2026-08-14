@@ -574,6 +574,126 @@ button {
 }
 
 
+
+/* EDUCATION */
+
+.education-section {
+    padding: 135px 5%;
+    background: #ffffff;
+    border-top: 1px solid var(--border);
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: 1fr .72fr;
+    gap: 120px;
+    align-items: center;
+}
+
+.education-title h2 {
+    font-size: clamp(60px, 8vw, 130px);
+    font-weight: 500;
+    line-height: .9;
+    letter-spacing: -.08em;
+}
+
+.education-title h2 span {
+    color: var(--blue);
+}
+
+.education-card {
+    min-height: 520px;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: #f0f0f0;
+    border-radius: 24px;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 70px rgba(0,0,0,.08);
+}
+
+.education-card-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .12em;
+}
+
+.education-year {
+    color: var(--accent);
+}
+
+.education-status {
+    color: #666;
+}
+
+.education-small {
+    color: #777;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .16em;
+}
+
+.education-card h3 {
+    margin-top: 18px;
+
+    font-size: clamp(31px, 3.2vw, 50px);
+    line-height: 1.08;
+    font-weight: 500;
+    letter-spacing: -.055em;
+}
+
+.education-short {
+    margin-top: 12px;
+
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.education-description {
+    max-width: 620px;
+    margin-top: 26px;
+
+    color: #5f5f5f;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.education-tags {
+    padding-top: 25px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    border-top: 1px solid #ccc;
+}
+
+.education-tags span {
+    padding: 8px 11px;
+
+    border: 1px solid #bdbdbd;
+    border-radius: 999px;
+
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .04em;
+}
+
 /* CERT */
 
 .cert-grid {
@@ -890,6 +1010,7 @@ footer > a {
     .hero-bottom,
     .intro-grid,
     .project-grid,
+    .education-grid,
     .cert-grid,
     .contact-grid {
         grid-template-columns: 1fr;
@@ -1011,6 +1132,7 @@ footer > a {
 
     .intro-section,
     .expertise-section,
+    .education-section,
     .cert-section {
         padding: 90px 5%;
     }
@@ -1073,6 +1195,33 @@ footer > a {
 
     .project-main h2 {
         font-size: 42px;
+    }
+
+
+    .education-grid {
+        gap: 50px;
+    }
+
+    .education-title h2 {
+        font-size: 55px;
+    }
+
+    .education-card {
+        min-height: 460px;
+        padding: 28px;
+        border-radius: 18px;
+    }
+
+    .education-card-top {
+        font-size: 9px;
+    }
+
+    .education-card h3 {
+        font-size: 30px;
+    }
+
+    .education-description {
+        font-size: 14px;
     }
 
     .cert-title h2 {
