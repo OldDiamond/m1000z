@@ -1048,87 +1048,95 @@ button {
 
 @media (max-width: 700px) {
 
+    /* Minimal mobile header: brand only */
     .site-header {
-        min-height: 74px;
-        padding: 0 17px;
+        min-height: 76px;
+        padding: 0 22px;
+
+        grid-template-columns: 1fr;
     }
 
     .site-brand {
+        justify-self: start;
+
         font-size: 16px;
     }
 
-    .header-actions {
-        gap: 7px;
-    }
-
-    .header-cv {
-        min-height: 40px;
-        padding: 0 11px;
-
-        font-size: 9px;
-    }
-
-    .header-cv span {
-        font-size: 12px;
-    }
-
-    .menu-toggle {
-        width: 34px;
-        height: 34px;
-    }
-
+    .desktop-nav,
+    .header-actions,
+    .menu-toggle,
     .mobile-menu {
-        top: 74px;
+        display: none !important;
     }
 
+
+    /* HERO */
     .hero {
-        padding: 18px 12px 60px;
+        padding: 18px 12px 58px;
     }
 
     .hero-card {
-        min-height: 600px;
-        padding: 24px 20px 28px;
+        min-height: 0;
+
+        padding: 26px 22px 34px;
 
         border-radius: 20px;
     }
 
     .hero-kicker {
         font-size: 8px;
+        letter-spacing: .13em;
     }
 
+    /*
+       Keep all three poster words fully inside the card.
+       These sizes are intentionally viewport-based.
+    */
     .hero-poster {
-        height: 360px;
+        height: 318px;
         margin-top: 12px;
+
+        overflow: hidden;
     }
 
     .poster-web {
         left: 0;
-        top: 24px;
+        top: 25px;
 
-        font-size: clamp(135px, 50vw, 210px);
+        font-size: min(39vw, 154px);
+        letter-spacing: -.075em;
 
         -webkit-text-stroke: 1px #111;
     }
 
     .poster-security {
         left: 0;
-        top: 190px;
+        top: 170px;
 
-        font-size: clamp(66px, 25vw, 105px);
+        font-size: min(17.2vw, 68px);
+        letter-spacing: -.07em;
+
+        white-space: nowrap;
     }
 
     .poster-specialist {
         left: 0;
-        top: 278px;
+        top: 235px;
 
-        font-size: clamp(36px, 13.5vw, 58px);
+        font-size: min(10.8vw, 43px);
+        letter-spacing: .015em;
+
+        white-space: nowrap;
 
         -webkit-text-stroke: 1px #111;
     }
 
     .hero-details {
         margin-top: 6px;
-        gap: 26px;
+        padding-top: 28px;
+
+        grid-template-columns: 1fr;
+        gap: 38px;
     }
 
     .eyebrow {
@@ -1136,12 +1144,15 @@ button {
     }
 
     .hero-identity h1 {
-        font-size: 24px;
+        margin-top: 12px;
+
+        font-size: 25px;
+        line-height: 1.05;
     }
 
     .hero-facts {
         grid-template-columns: 1fr 1fr;
-        gap: 18px;
+        gap: 22px 24px;
     }
 
     .hero-facts span {
@@ -1152,6 +1163,8 @@ button {
         font-size: 12px;
     }
 
+
+    /* GENERAL SECTIONS */
     .section {
         padding: 82px 5%;
     }
@@ -1186,6 +1199,8 @@ button {
         font-size: 18px;
     }
 
+
+    /* EXPERTISE */
     .info-row {
         grid-template-columns: 30px 1fr 24px;
 
@@ -1208,6 +1223,8 @@ button {
         grid-row: 1;
     }
 
+
+    /* EDUCATION */
     .education-layout {
         gap: 36px;
     }
@@ -1233,14 +1250,17 @@ button {
         padding-top: 0;
     }
 
+
+    /* NET NEEDLE */
     .project-wordmark span {
-        font-size: clamp(86px, 28vw, 122px);
-        letter-spacing: -.04em;
+        font-size: clamp(82px, 27vw, 118px);
+        letter-spacing: -.035em;
     }
 
     .net-word {
         -webkit-text-stroke: 2px #84AECD;
         text-stroke: 2px #84AECD;
+
         paint-order: stroke fill;
     }
 
@@ -1249,6 +1269,7 @@ button {
 
         -webkit-text-stroke: 2px #111111;
         text-stroke: 2px #111111;
+
         paint-order: stroke fill;
     }
 
@@ -1261,8 +1282,11 @@ button {
         font-size: 40px;
     }
 
+
+    /* CERTIFICATION */
     .credential-card {
         min-height: 430px;
+
         padding: 27px;
 
         border-radius: 18px;
@@ -1272,6 +1296,8 @@ button {
         font-size: 28px;
     }
 
+
+    /* CONTACT */
     .contact-section {
         padding: 70px 5% 82px;
     }
@@ -1296,6 +1322,8 @@ button {
         font-size: 15px;
     }
 
+
+    /* FOOTER */
     .site-footer {
         grid-template-columns: 1fr;
         gap: 14px;
@@ -1314,28 +1342,35 @@ button {
 
 @media (max-width: 420px) {
 
+    .hero-card {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     .hero-poster {
-        height: 330px;
+        height: 300px;
     }
 
     .poster-web {
-        font-size: 142px;
+        top: 24px;
+
+        font-size: 38vw;
     }
 
     .poster-security {
-        top: 174px;
+        top: 158px;
 
-        font-size: 72px;
+        font-size: 16.6vw;
     }
 
     .poster-specialist {
-        top: 250px;
+        top: 220px;
 
-        font-size: 39px;
+        font-size: 10.4vw;
     }
 
     .hero-facts {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .wide-heading h2 {
@@ -1356,6 +1391,39 @@ button {
 
 }
 
+
+@media (max-width: 360px) {
+
+    .hero-card {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .hero-poster {
+        height: 278px;
+    }
+
+    .poster-web {
+        font-size: 36vw;
+    }
+
+    .poster-security {
+        top: 146px;
+
+        font-size: 15.7vw;
+    }
+
+    .poster-specialist {
+        top: 202px;
+
+        font-size: 9.8vw;
+    }
+
+    .hero-identity h1 {
+        font-size: 23px;
+    }
+
+}
 
 /* =========================================================
    ACCESSIBILITY
